@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cicids2017-intrusion-detection"
+version = "1.0.0"
+description = "Leakage-aware machine-learning pipelines for CIC-IDS2017 intrusion detection."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Bahareh Keshavarz"},
+  {name = "Mojtaba Sharifian"},
+]
+dependencies = [
+  "imbalanced-learn>=0.12",
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "scikit-learn>=1.4",
+]
+
+[project.optional-dependencies]
+notebook = ["jupyter>=1.0", "matplotlib>=3.8", "seaborn>=0.13"]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+cicids-train = "cicids2017.cli:main"
+
+[project.urls]
+Repository = "https://github.com/Bahareh527/cicids2017-intrusion-detection"
+Dataset = "https://www.unb.ca/cic/datasets/ids-2017.html"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+

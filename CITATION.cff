@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this educational software, please cite it and the CIC-IDS2017 dataset paper."
+title: "Leakage-aware CIC-IDS2017 Intrusion Detection"
+type: software
+authors:
+  - family-names: Keshavarz
+    given-names: Bahareh
+version: 1.0.0
+date-released: 2026-09-12
+repository-code: "https://github.com/Bahareh527/cicids2017-intrusion-detection"
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization"
+  authors:
+    - family-names: Sharafaldin
+      given-names: Iman
+    - family-names: Habibi Lashkari
+      given-names: Arash
+    - family-names: Ghorbani
+      given-names: Ali A.
+  collection-title: "Proceedings of the 4th International Conference on Information Systems Security and Privacy"
+  pages: 108-116
+  year: 2018
+  doi: "10.5220/0006639801080116"
+
